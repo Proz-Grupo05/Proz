@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="menu.css">
+    
     <title>Supermercado</title>
   </head>
 
@@ -11,16 +13,34 @@
 
     <header>
       <nav class="top-menu" aria-label="Main navigation">
-        <img src="https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U" alt="Logotipo do mercado">
-        <form action="#" method="get">
-          <input type="text" name="search" placeholder="Buscar por produto, marca ou categoria" />
-          <button type="submit"><i class="fas fa-search"></i></button>
-        </form>
+        <a href="#home">
+          <img id="logo-menu" src="./assets/compre-bem-no-bg-120x120.png" alt="Logotipo do mercado">
+        </a>
+        <div class="top-menu-container-navs">
+          <ul class="top-menu-links">
+            <li><a href="#sobre">Sobre</a></li>
+          </ul>
+          <div class="top-menu-container-search-cart">
+            <form class="top-menu-form" method="get">
+              <input type="text" name="search" placeholder="Buscar por produto, marca ou categoria" />
+              <button class="btn-icon" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <ul class="top-menu-cart">
+              <li><a href="#login"><i class="fas fa-user icon"></i>Entrar</a></li>
+              <li><a href="#carrinho"><i class="fas fa-shopping-cart icon"></i>Carrinho</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="category-menu" aria-label="Categorias do Supermercado">
         <ul>
-          <li><a href="#categorias">Categorias</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#login">Login</a></li>
-          <li><a href="#carrinho"><i class="fas fa-shopping-cart"></i></a></li>
+            <li><a href="#mercearia">MERCEARIA</a></li>
+            <li><a href="#bebidas">BEBIDAS</a></li>
+            <li><a href="#padaria">PADARIA</a></li>
+            <li><a href="#frios">FRIOS</a></li>
+            <li><a href="#açougue">AÇOUGUE</a></li>
+            <li><a href="#higiene">HIGIENE</a></li>
+            <li><a href="#limpeza">LIMPEZA</a></li>
         </ul>
       </nav>
     </header>
