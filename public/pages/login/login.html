@@ -7,22 +7,22 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <header>
+    <header class="cabecalho">
         <h1>Login</h1>
-        <a href="../cadastro/cadastro.html">
+        <a href="../home/home.html">
             <img src="https://cdn-icons-png.flaticon.com/128/3236/3236910.png" alt="Voltar">
         </a>
     </header>
 
-    <div>
+    <div class="card">
         <h3>Login</h3>
-        <form action="#" method="POST">
-            <input type="email" name="email" placeholder="E-mail" required>
-            <input type="password" name="senha" placeholder="Senha" required>
-            <button type="submit">Entrar</button>
+        <form action="#" method="POST" class="form">
+            <input type="email" name="email" placeholder="E-mail" required class="input">
+            <input type="password" name="senha" placeholder="Senha" required class="input">
+            <button type="submit" class="button-submit">Entrar</button>
         </form>
-        <button type="button" onclick="buscaSenha()">Esqueceu a senha?</button>
         <a href="../cadastro/cadastro.html">Não possui conta? Cadastre-se!</a>
+        <button type="button" onclick="buscaSenha()" class="button-pass">Esqueceu a senha?</button>
     </div>
 </body>
 </html>
