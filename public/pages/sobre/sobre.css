@@ -1,0 +1,157 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&family=Poppins:ital,wght@0,100;0,500;0,800;1,100;1,400&family=Roboto+Slab:wght@500&family=Titillium+Web:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,500;0,800;1,100;1,400&family=Titillium+Web:ital,wght@1,200&display=swap');
+
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(img/fundo7.jpg);
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin: 10px;
+    
+}
+
+
+
+header {
+    background-color: #44582a5d;
+    background-image: img;
+    padding: 20px;
+ 
+    
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    margin-right: 20px;
+}
+
+.menu input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.menu input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    
+}
+.inicial, a {
+    text-decoration: none;
+    color: #184205;
+    text-align:right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+section {
+    padding: 25px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    text-align: center;
+    text-shadow: 2px 1px 3px #274124;
+}
+.textoSobreNos {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+#fotoatual {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#imgantiga {
+    text-align: center;
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.redesociais ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.redesociais li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.redesociais a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.Pagamento, .formasPagamento, .localizacao {
+    margin-bottom: 10px;
+}
+
+.formasPagamento img {
+    margin: 0 5px;
+}
+
+/* Botão de voltar ao topo */
+.ListaDireita a[href="#top"] {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+.ListaDireita a[href="#top"] img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu a {
+        margin: 10px 0;
+    }
+
+    .banner img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+  
