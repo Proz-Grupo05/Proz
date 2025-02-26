@@ -21,7 +21,7 @@ body {
 
 
 header {
-    background-color: #44582a5d;
+    background-color: #38422969;
     background-image: img;
     padding: 20px;
  
@@ -87,6 +87,7 @@ h2, h3 {
 #fotoatual {
     text-align: center;
     margin-bottom: 20px;
+    padding: 10px;
 }
 #imgantiga {
     text-align: center;
