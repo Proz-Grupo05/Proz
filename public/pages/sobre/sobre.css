@@ -16,15 +16,23 @@
     --color-text-gray: #666;
 }
 body {
-    background-image: url(img/fundo7.jpg);  
+    
+    margin: 0 auto;
+    padding: 7px;
+    margin: 5px;
+    background: var(--color-button-bg);
+    border-radius: 10px;
+
+  
 }
 
 .container {
-    max-width: 1400px;
+   
     margin: 0 auto;
-    padding: 20px;
-    margin: 10px;
-    background: var(--color-background);
+    padding: 7px;
+    margin: 5px;
+    background: var(--color-button-bg);
+    border-radius: 10px;
     
 }
 .menu {
@@ -57,46 +65,89 @@ body {
     text-decoration: none;
     color: #333;  
 }
-.inicial, a {
+.inicial, a{
     text-decoration: none;
-    color: #184205;
+    font-style: oblique;
+    color: #174906;
     text-align:right;
 }
 section {
-    padding: 25px;
+    padding: 10px;
     
 }
-
-select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-      
-}
-#opcao{
-    color:  #105b06;
+#linkSelect{
+    padding: 8px;
+    border: 1px solid #174906;
+    border-radius: 15px;
+    color: #174906;
+    font-style: italic;
 }
 
-h2, h3 {
+h3{
     text-align: center;
-    text-shadow: 2px 1px 3px #274124;
-   
+    font-style:oblique;
+    text-shadow: 2px 1px 3px #274124; 
 }
+#h3{
+    text-shadow: 2px 1px 3px #274124; 
+    text-align:left;
+}
+#txtquemSomos{
+    
+
+}
+#parceiro{
+    text-align: center;
+    margin: 30px;
+    margin-bottom: 2px;
+    font-size: large;
+}
+
 .textoSobreNos {
-    text-align: justify;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+#nossaHistoria{
+ text-align: justify;
+text-align: left;
+}
+#textotudocomecou{
+    text-align: left;
+    margin: 20px;
+    text-align: justify;
+
+
+
+}
 #fotoatual {
+    width: 30px;
     text-align: center;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 5px;
 }
 #imgantiga {
-    text-align: center;
-    margin-bottom: 20px;
+    display: table-cell;
+    float:left;
+    margin-left: -8%;
+    margin-bottom: 30px;
+  
 }
+#termos{
+    width: 900px;
+    font-style: oblique;
+    font-size: small;
+    text-align: justify;
+    margin: 20px;
+    
+   
+}
+#termosdeconde{
+    width: 800px;
+    font-style: oblique;
+    margin-top: 150px;
+}
+
+
 footer {
     background-color: #333333c8;
     color: #fff;

@@ -1,63 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MERCADÃO</title>
     <link rel="stylesheet" href="sobre.css">
 </head>
+
 <body>
     <div>
-        
+
     </div>
     <header class="container">
         <div class="menu">
-            <img id="logo" src="img/logomercadao.png" width="150" height="150" alt="logo">     
+            <img id="logo" src="img/logomercadao.png" width="150" height="150" alt="logo">
             <input type="text" name="pesquisa" placeholder="Barra de Pesquisa">
             <input type="submit" name="enviar" value="buscar">
-          
-            <a href="">Cadastro</a>
+
+            <a href="/public/pages/login/login.html" target="_blank">Login/Cadastro</a>
             <a href="">Carrinho</a>
-              
-            
+            <a href="/public/pages/trocas/trocas.html">Trocas</a>
+
+
         </div>
         <div class="inicial">
-            <p></a><a href="linkDaPaginaInicial">Página inicial</a></p>
-        </div>
-    </header>
-    <section>
-        <select id="opcao">
-            <option name="">Categorias</option>
-            <option>Bebidas</option>
-            <option>Mercearia</option>
-            <option>Alimentícios</option>
-            <option>Higiene e perfumaria</option>
-            <option>Papelaria</option>
-            <option>Limpeza</option>
-        </select>
-        
-        <H3 ALIGN=CENTER>Quem somos</H3>
-        <main class="textoSobreNos">
-            <p>Somos o seu Parceirão!<br>
-                &nbsp Valorizamos a parceria com nossos clientes e nosso time, que conta com mais de 70 mil
-                colaboradores,
-                treinados e capacitados, sempre a postos para atender a todos. Estamos presentes em todos os Estados do.
-                Brasil e somos a maior rede de mercado do País. Somos o lugar certo para você comprar barato, seja para
-                o seu negócio ou sua casa.
-            </p><br>
-        
-        <div id="fotoatual">
-            <img src="img/fotoMercado.jpg " width="1000" height="600" alt="banner">
+            <p></a><a href="/public/pages/home/home.html" target="_blank">Página inicial</a></p>
         </div>
 
-        <h3 ALIGN=CENTER>Nossa História</h3><br>
-        <P>
+        <script>
+            function navigateToURL(selectElement) {
+                const selectedValue = selectElement.value;
+                if (selectedValue) {
+                    window.open(selectedValue, '_blank');
+                    selectElement.selectedIndex = 0;
+                }
+            }
+        </script>
+
+        <label for="linkSelect">:</label>
+        <select id="linkSelect" onchange="navigateToURL(this)">
+            <option value="">Selecione...</option>
+            <option value="/public/pages/categorias/categorias.html">Categorias</option>
+            <option value="https://www.youtube.com">Bebidas</option>
+            <option value="https://www.wikipedia.org">Mercearia</option>
+            <option value="https://www.youtube.com">Alimentícios</option>
+            <option value="https://www.wikipedia.org">Higiene e perfumaria</option>
+            <option value="https://www.youtube.com">Papelaria</option>
+            <option value="https://www.wikipedia.org">Limpeza</option>
+        </select>
+
+    </header>
+
+    <H3 ALIGN=CENTER>Quem somos</H3>
+    <main id="txtquemSomos">
+        <p id="parceiro" >Somos o seu Parceirão!</p><br>
+        <p>
+            &nbsp Valorizamos a parceria com nossos clientes e nosso time, que conta com mais de 70 mil
+            colaboradores,
+            treinados e capacitados, sempre a postos para atender a todos. Estamos presentes em todos os Estados do.
+            Brasil e somos a maior rede de mercado do País. Somos o lugar certo para você comprar barato, seja para
+            o seu negócio ou sua casa.
+        </p><br>
+
+        <div id="fotoatual">
+            <img src="img/fotoMercado.jpg " width="800" height="440" alt="banner">
+        </div>
+
+        <h3>Nossa História</h3><br>
+        <P id="nossaHistoria">
             &nbsp O MERCADÃO comemora quase 60 anos de história com uma trajetória de expansão raramente vista no varejo
             brasileiro. Hoje, já são mais de 230 unidades em todos os estados do Brasil, de Roraima ao Rio Grande do
             Sul, entre lojas de autosserviço e atacados de distribuição. Conheça aqui nossa história!
         </P><br>
-        <H3 ALIGN=CENTER>Tudo Começou</H3><br>
-        <P>
+       
+        <div id="imgantiga">
+            <img src="img/fotoAntiga.jpg" width="800" height="460" alt="banner">
+        </div>
+        <H3>Tudo Começou</H3><br>
+        <P id="textotudocomecou">
             &nbsp No ano de 1960, o gaúcho Bertuol Rizoppo, nascido na cidade de Vargas, criou uma firma individual a
             Bertuol Rizoppo Comércio e Representações — e iniciou suas atividades com representação comercial atacadista
             de produtos alimentícios, como queijos e sardinha salgada.
@@ -75,15 +96,12 @@
             que passaram a administrar os negócios. Em um armazém bem maior, com cerca de 1.000 m², a nova empresa
             passou a vender por conta própria.
         </P>
+        <br><br>
+        <h3 id="termosdeconde">Termos e Condições</h3><br>
+        <div id="termos">
 
-        <div id="imgantiga">
-            <img src="img/fotoAntiga.jpg"  width="1000" height="600" alt="banner">
-        </div>
-    
-        <div>
-            <h3>Termos e Condições</h3><br>
             <p>
-                Termos de uso do MERCADÃO Online<br>
+                Termos de uso do MERCADÃO Online<br><br>
                 &nbsp Apresentamos a você, usuário, os Termos e Condições de Uso, onde constam as principais regras a
                 serem observadas por todos que acessam a plataforma digital do MERCADÃO e suas funcionalidades. Estes
                 Termos de Uso aplicam-se ao uso dos serviços oferecidos por MERCADÃO S.A. pessoa jurídica de
@@ -121,47 +139,47 @@
 
     </main>
 
-</section>
-        <div ALIGN=CENTER class="logo">
-            <img src="img/logomercadao.png" width="150" height="150" alt="logo">
-        </div>
-       
-        <footer>
-            <nav class="redesociais">
-                <ul class="redesociais">
-                    <li><a href="https://www.facebook.com.br" target="_blank">facebook</a></li>
-                    <li><a href="https://www.instagram.com.br" target="_blank">Instagran</a></li>
-                    <li><a href="https://www.whatsapp.com" target="_blank">WhatsApp</a></li>
-                    <li><a href="https://www.gmail.com.br" target="_blank">E-mail</a></li>
-                </ul>
-            </nav>
-            <div id="Pagamento">
-                <p>Formas de Pagamento</p>
-            </div>
-            <div id="formasPagamento">
-                    <img src="img/cartaoCredito (1).png" width="40" height="40"></img>
-                    <img src="img/cartaoCredito (2).png" width="40" height="40"></img>
-                    <img src="img/pix.png" width="40" height="40"></a>
-            </div>
-            <div id="nomes">
-                <ul>
-                    <li>VISA</li>
-                    <li>ELO</li>
-                    <li>PIX</li>
-                    
-                </ul>
-            </div>
+    </section>
+    <div ALIGN=CENTER class="logo">
+        <img src="img/logomercadao.png" width="150" height="150" alt="logo">
+    </div>
 
-            <div id="localizacao">
-                <p>Localização</p>
-                    <a href="https://g.co/kgs/tmYPi1n" target="_blank">
-                        <img src="img/icone de localização.png" width="50" height="50">
-                    </a>
-            </div>
-        </footer>
-        <a href="#top" title="Voltar ao topo">
-            <img src="img/seta-para-cima.png" width="50" height="50" alt="Voltar ao topo">
-        </a>
+    <footer>
+        <nav class="redesociais">
+            <ul class="redesociais">
+                <li><a href="https://www.facebook.com.br" target="_blank">facebook</a></li>
+                <li><a href="https://www.instagram.com.br" target="_blank">Instagran</a></li>
+                <li><a href="https://www.whatsapp.com" target="_blank">WhatsApp</a></li>
+                <li><a href="https://www.gmail.com.br" target="_blank">E-mail</a></li>
+            </ul>
+        </nav>
+        <div id="Pagamento">
+            <p>Formas de Pagamento</p>
+        </div>
+        <div id="formasPagamento">
+            <img src="img/cartaoCredito (1).png" width="40" height="40"></img>
+            <img src="img/cartaoCredito (2).png" width="40" height="40"></img>
+            <img src="img/pix.png" width="40" height="40"></a>
+        </div>
+        <div id="nomes">
+            <ul>
+                <li>VISA</li>
+                <li>ELO</li>
+                <li>PIX</li>
+
+            </ul>
+        </div>
+
+        <div id="localizacao">
+            <p>Localização</p>
+            <a href="https://g.co/kgs/tmYPi1n" target="_blank">
+                <img src="img/icone de localização.png" width="50" height="50">
+            </a>
+        </div>
+    </footer>
+    <a href="#top" title="Voltar ao topo">
+        <img src="img/seta-para-cima.png" width="50" height="50" alt="Voltar ao topo">
+    </a>
 
 </body>
 
