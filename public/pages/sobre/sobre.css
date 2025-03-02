@@ -1,21 +1,30 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&family=Poppins:ital,wght@0,100;0,500;0,800;1,100;1,400&family=Roboto+Slab:wght@500&family=Titillium+Web:ital,wght@1,200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,500;0,800;1,100;1,400&family=Titillium+Web:ital,wght@1,200&display=swap');
-
-
-body {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-image: url(img/fundo7.jpg);
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+:root{
+    --color-background: linear-gradient(180deg, #d5fc79d8, #96e6a1cf);
+    --color-card-bg: #ffffff;
+    --color-card-shadow: rgba(0, 0, 0, 0.15);
+    --color-input-border: #ccc;
+    --color-input-focus: #96e6a1;
+    --color-button-bg: linear-gradient(135deg, #96e6a1, #d4fc79);
+    --color-button-hover: linear-gradient(135deg, #d4fc79, #96e6a1);
+    --color-text-dark: #333;
+    --color-text-gray: #666;
+}
+body {
+    background-image: url(img/fundo7.jpg);  
+}
+
 .container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
     margin: 10px;
-    background-color: #71a91e69;
+    background: var(--color-background);
     
 }
 .menu {
@@ -43,22 +52,16 @@ body {
     cursor: pointer;
     
 }
-
 .menu a {
     margin-left: 20px;
     text-decoration: none;
-    color: #333;
-    
-    
+    color: #333;  
 }
 .inicial, a {
     text-decoration: none;
     color: #184205;
     text-align:right;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
 }
-
 section {
     padding: 25px;
     
@@ -69,22 +72,21 @@ select {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 20px;
-   
-    
-    
+      
 }
 #opcao{
-    
     color:  #105b06;
 }
 
 h2, h3 {
     text-align: center;
     text-shadow: 2px 1px 3px #274124;
+   
 }
 .textoSobreNos {
     text-align: justify;
     margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #fotoatual {
     text-align: center;
@@ -117,29 +119,21 @@ footer {
     text-decoration: none;
 }
 
-.Pagamento, .formasPagamento, .localizacao {
+#Pagamento, #formasPagamento, #localizacao {
     margin-bottom: 10px;
+    margin: 10px;
+    display:inline;
+}
+#nomes ul li{
+    margin:80px;
+    display:inline;
 }
 
-.formasPagamento img {
-    margin: 0 5px;
-}
+ img {
+   margin: 0 70px;
+   margin-top: 15px;
 
-/* Botão de voltar ao topo */
-.ListaDireita a[href="#top"] {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
 }
-
-.ListaDireita a[href="#top"] img {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 /* Estilos para telas menores */
 @media (max-width: 768px) {
     .menu {
