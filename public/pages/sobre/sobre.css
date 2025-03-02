@@ -134,6 +134,7 @@ footer {
    margin-top: 15px;
 
 }
+
 /* Estilos para telas menores */
 @media (max-width: 768px) {
     .menu {
