@@ -1,0 +1,106 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #9fc947; /* Cinza claro */
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .search-box {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .menu-buttons, .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .menu-buttons button, .auth-buttons button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #315432; /* Cinza escuro */
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        nav {
+            background-color: #439a3d; /* Cinza médio */
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #315432; /* Cinza escuro */
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .sidebar {
+            width: 25%;
+            padding: 20px;
+            border-right: 1px solid #ccc;
+        }
+        .sidebar img {
+            width: 120px;
+            height: 120px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .products {
+            width: 75%;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .products img {
+            width: 120px;
+            height: 120px;
+        }
+        .show-more {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .show-more button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #315432; /* Cinza escuro */
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #9fc947; /* Cinza claro */
+            padding: 20px;
+            text-align: center;
+        }
