@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="cadastro.css">
 </head>
 <body>
-    <header>
+    <header class="cabecalho">
         <h1>Cadastro</h1>
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/3236/3236910.png" alt="Voltar"></a>
+        <a href="../home/home.html">
+            <img src="https://cdn-icons-png.flaticon.com/128/3236/3236910.png" alt="Voltar">
+        </a>
     </header>
 
-    <div>
+    <div class="card">
         <h3>Cadastro</h3>
-        <form action="#" method="POST">
-            <input type="text" name="usuario" placeholder="Nome de usuário" required>
-            <input type="email" name="email" placeholder="E-mail" required>
-            <input type="password" name="senha" placeholder="Senha" required>
-            <button type="submit">Cadastrar</button>
-            <a href="../login/login.html">já possui conta? faça login!</a>
+        <form action="#" method="POST" class="form">
+            <input type="text" name="usuario" placeholder="Nome de usuário" required class="input">
+            <input type="email" name="email" placeholder="E-mail" required class="input">
+            <input type="password" name="senha" placeholder="Senha" required class="input">
+            <button type="submit" class="button-submit">Cadastrar</button>
+            <a href="../login/login.html">Já possui conta? Faça login!</a>
         </form>
     </div>
 </body>
