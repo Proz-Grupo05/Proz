@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../../../rodape.css">
     <link rel="stylesheet" href="home.css">
     <script src="home.js" defer></script>
-    
+    <script src="../../../rodape.js" defer></script>
+
     <title>Supermercado</title>
   </head>
 
@@ -105,15 +106,18 @@
               <i class="fas fa-user"></i>
               <input type="text" name="name" id="name" placeholder="Digite seu nome*" required>
             </div>
+            <span class="error-message" id="name-error"></span>
             <div class="input-with-icon">
               <i class="fas fa-envelope"></i>
               <input type="email" name="email" id="email" placeholder="Digite seu email*" required>
             </div>
+            <span class="error-message" id="email-error"></span>
             <div class="input-with-icon input-with-icon-submit">
               <i class="fas fa-phone"></i>
               <input type="tel" name="tel" id="nome" placeholder="Digite seu telefone">
               <button class="btn-newsletter-form" type="submit">Enviar</button>
             </div>
+            <span class="error-message" id="phone-error"></span>
           </form>
         </div>
   
