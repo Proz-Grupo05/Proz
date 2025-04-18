@@ -126,7 +126,7 @@ brands.forEach(brand => {
   productBrand.classList.add("brand-icon");  
   productBrand.innerHTML = 
     `
-    <a href="${brands.href}">
+    <a href="../categorias/categorias.html">
       <img class="category-icon" src="${brand.imgSrc}" alt="${brand.imgAlt}" />
     </a>
     `
@@ -164,7 +164,7 @@ categories.forEach(category => {
   productCategoryContainer.classList.add("product-category-container");
   
   productCategoryContainer.innerHTML = `
-    <a class="product-category" href="../categorias/${category.name.toLowerCase()}.html">
+    <a class="product-category" href="../categorias/categorias.html">
       <img class="category-icon" src="${category.img}" alt="${category.name}" />
     </a>
     <div class="product-category-description">
