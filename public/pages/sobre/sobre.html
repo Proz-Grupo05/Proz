@@ -1,65 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MERCADÃO</title>
     <link rel="stylesheet" href="sobre.css">
 </head>
+
 <body>
     <div>
-        
+
     </div>
     <header class="container">
         <div class="menu">
-            <img id="logo" src="img/logomercadao.png" width="150" height="150" alt="logo">     
+            <img id="logo" src="img/logomercadao.png" width="150" height="150" alt="logo">
             <input type="text" name="pesquisa" placeholder="Barra de Pesquisa">
             <input type="submit" name="enviar" value="buscar">
-          
-            <a href="">Cadastro</a>
+            <a href="/public/pages/login/login.html" target="_blank">Login/Cadastro</a>
             <a href="">Carrinho</a>
-              
-            
-        </div>
-        <div class="inicial">
-            <p></a><a href="linkDaPaginaInicial">Página inicial</a></p>
-        </div>
-    </header>
-    <section>
-        <select id="opcao">
-            <option name="">Categorias</option>
-            <option>Bebidas</option>
-            <option>Mercearia</option>
-            <option>Alimentícios</option>
-            <option>Higiene e perfumaria</option>
-            <option>Papelaria</option>
-            <option>Limpeza</option>
-        </select>
-        
-        <H2 ALIGN=CENTER>Quem somos</H2>
-        <main class="textoSobreNos">
-            <p>Somos o seu Parceirão!<br>
-                &nbsp Valorizamos a parceria com nossos clientes e nosso time, que conta com mais de 70 mil
-                colaboradores,
-                treinados e capacitados, sempre a postos para atender a todos. Estamos presentes em todos os Estados do.
-                Brasil e somos a maior rede de mercado do País. Somos o lugar certo para você comprar barato, seja para
-                o seu negócio ou sua casa.
-            </p>
-        
-        <div id="fotoatual">
-            <img src="img/fotoMercado.jpg " width="1000" height="600" alt="banner">
-        </div>
+            <a href="/public/pages/trocas/trocas.html">Trocas</a>
 
-        <h2 ALIGN=CENTER>Nossa História</h2>
-        <P>
+
+        </div>
+        <section class="paginahome">
+        <a href="/public/pages/home/home.html" target="_blank">Página inicial</a>
+
+        </section>
+
+
+        <script>
+            function navigateToURL(selectElement) {
+                const selectedValue = selectElement.value;
+                if (selectedValue) {
+                    window.open(selectedValue, '_blank');
+                    selectElement.selectedIndex = 0;
+                }
+            }
+        </script>
+
+        <label for="linkSelect"></label>
+        <select id="linkSelect" onchange="navigateToURL(this)">
+            <option value="">Selecione...</option>
+            <option value="/public/pages/categorias/categorias.html">Categorias</option>
+            <option value="https://www.youtube.com">Bebidas</option>
+            <option value="https://www.wikipedia.org">Merceadria</option>
+            <option value="https://www.youtube.com">Alimentícios</option>
+            <option value="https://www.wikipedia.org">Higiene e perfumaria</option>
+            <option value="https://www.youtube.com">Papelaria</option>
+            <option value="https://www.wikipedia.org">Limpeza</option>
+        </select>
+
+    </header>
+
+    <H3 ALIGN=CENTER>Quem somos</H3>
+    <main>
+        <p id="parceiro">Somos o seu Parceirão!</p><br>
+
+        <aside id="lateral">
+            <p id="txtquemsomos">
+                &nbsp Valorizamos a parceria com nossos clientes e nosso time, que conta com mais de 70 mil
+                colaboradores, treinados e capacitados, sempre a postos para atender a todos. Estamos presentes em todos
+                os Estados do. Brasil e somos a maior rede de mercado do País. Somos o lugar certo para você comprar
+                barato, seja para o seu negócio ou sua casa.
+            </p><br>
+        </aside>
+        <section id="fotoatual">
+            <img src="img/fotoMercado.jpg " width="800" height="460" alt="banner" * />
+        </section>
+
+        <h3 id="titulohistoria">Nossa História</h3><br>
+        <P id="txtnossaHistoria">
             &nbsp O MERCADÃO comemora quase 60 anos de história com uma trajetória de expansão raramente vista no varejo
             brasileiro. Hoje, já são mais de 230 unidades em todos os estados do Brasil, de Roraima ao Rio Grande do
             Sul, entre lojas de autosserviço e atacados de distribuição. Conheça aqui nossa história!
-        </P>
-        <H3 ALIGN=CENTER>
-            TUDO COMEÇOU
-        </H3>
-        <P>
+        </P><br>
+
+        <div id="imgantiga">
+            <img src="img/fotoAntiga.jpg" width="800" height="460" alt="banner">
+        </div>
+        <H3>Tudo Começou</H3><br>
+        <P id="textotudocomecou">
             &nbsp No ano de 1960, o gaúcho Bertuol Rizoppo, nascido na cidade de Vargas, criou uma firma individual a
             Bertuol Rizoppo Comércio e Representações — e iniciou suas atividades com representação comercial atacadista
             de produtos alimentícios, como queijos e sardinha salgada.
@@ -77,88 +98,85 @@
             que passaram a administrar os negócios. Em um armazém bem maior, com cerca de 1.000 m², a nova empresa
             passou a vender por conta própria.
         </P>
+        <br><br>
+        <h3 id="termosdeconde">Termos e Condições</h3><br>
+        <p>Termos de uso do MERCADÃO Online<br><br>
+        <div id="termos">
+            &nbsp Apresentamos a você, usuário, os Termos e Condições de Uso, onde constam as principais regras a
+            serem observadas por todos que acessam a plataforma digital do MERCADÃO e suas funcionalidades. Estes
+            Termos de Uso aplicam-se ao uso dos serviços oferecidos por MERCADÃO S.A. pessoa jurídica de
+            direito privado com sede na cidade de São Paulo, na av. Morvan Dias de Figueiredo, 0000, Maria, Estado
+            de São Paulo, CEP 00.000-901, devidamente inscrita no Cadastro de Pessoa Jurídica (CNPJ/MF) sob o nº
+            00.000.000/0001-09, doravante denominada MERCAÇÃO, por meio dos sites sob domínios e subdomínios
+            administrados.
 
-        <div id="imgantiga">
-            <img src="img/fotoAntiga.jpg"  width="1000" height="600" alt="banner">
-        </div>
-    
-        <div>
-            <h3>Termos e Condições</h3><br>
-            <p>
-                Termos de uso do MERCADÃO Online<br>
-                &nbsp Apresentamos a você, usuário, os Termos e Condições de Uso, onde constam as principais regras a
-                serem observadas por todos que acessam a plataforma digital do MERCADÃO e suas funcionalidades. Estes
-                Termos de Uso aplicam-se ao uso dos serviços oferecidos por MERCADÃO S.A. pessoa jurídica de
-                direito privado com sede na cidade de São Paulo, na av. Morvan Dias de Figueiredo, 0000, Maria, Estado
-                de São Paulo, CEP 00.000-901, devidamente inscrita no Cadastro de Pessoa Jurídica (CNPJ/MF) sob o nº
-                00.000.000/0001-09, doravante denominada MERCAÇÃO, por meio dos sites sob domínios e subdomínios
-                administrados.
+            Qualquer pessoa, doravante denominada Usuário comprador, que pretenda utilizar os serviços do MERCADÃO
+            deverá aceitar estes Termos de Uso e todas as demais políticas e princípios que o regem.
 
-                Qualquer pessoa, doravante denominada Usuário comprador, que pretenda utilizar os serviços do MERCADÃO
-                deverá aceitar estes Termos de Uso e todas as demais políticas e princípios que o regem.
+            A ACEITAÇÃO DESTES TERMOS DE USO É ABSOLUTAMENTE INDISPENSÁVEL À UTILIZAÇÃO DOS SITES E SERVIÇOS
+            PRESTADOS PELO MERCADÃO.
 
-                A ACEITAÇÃO DESTES TERMOS DE USO É ABSOLUTAMENTE INDISPENSÁVEL À UTILIZAÇÃO DOS SITES E SERVIÇOS
-                PRESTADOS PELO MERCADÃO.
+            O Usuário comprador deverá ler, certificar-se de haver entendido e aceitar todas as condições
+            estabelecidas nos Termos de Uso e nas Políticas de Privacidade, assim como nos demais documentos
+            incorporados aos mesmos por referência, antes de seu cadastro como Usuário da plataforma mantida pelo
+            MERCADÃO.
 
-                O Usuário comprador deverá ler, certificar-se de haver entendido e aceitar todas as condições
-                estabelecidas nos Termos de Uso e nas Políticas de Privacidade, assim como nos demais documentos
-                incorporados aos mesmos por referência, antes de seu cadastro como Usuário da plataforma mantida pelo
-                MERCADÃO.
+            1. Objetivo
+            Os serviços objeto do presente Termo de Uso consistem na utilização, por parte do Usuário comprador, da
+            plataforma mantida pelo MERCADÃO, .
 
-                1. Objetivo
-                Os serviços objeto do presente Termo de Uso consistem na utilização, por parte do Usuário comprador, da
-                plataforma mantida pelo MECADÃO, .
+            Portanto, o MERCADÃO fornece aos seus clientes e usuários, produtos produtos na Plataforma os quais são
+            ofertados vendidos e com entrega realizada diretamente pelo
 
-                Portanto, o MECADÃO fornece aos seus clientes e usuários, produtos produtos na Plataforma os quais são
-                ofertados vendidos e com entrega realizada diretamente pelo
-
-                2. Cadastro
-                Os serviços da plataforma do MERCADÃO estão disponíveis apenas para as pessoas que tenham capacidade
-                legal para contratá-los. Não podem utilizá-los, assim, pessoas que não gozem dessa capacidade, inclusive
-                menores de idade, ou pessoas que tenham sido inabilitadas da plataforma MERCADÃO, temporária ou
-                definitivamente.
+            2. Cadastro
+            Os serviços da plataforma do MERCADÃO estão disponíveis apenas para as pessoas que tenham capacidade
+            legal para contratá-los. Não podem utilizá-los, assim, pessoas que não gozem dessa capacidade, inclusive
+            menores de idade, ou pessoas que tenham sido inabilitadas da plataforma MERCADÃO, temporária ou
+            definitivamente.
             </p>
 
         </div>
 
     </main>
+    <div ALIGN=CENTER class="logo">
+        <img src="img/logomercadao.png" width="150" height="150" alt="logo">
+    </div>
 
-</section>
-        <div ALIGN=CENTER class="logo">
-            <img src="img/logomercadao.png" width="150" height="150" alt="logo">
+    <footer>
+        <section class="redesociais">
+            <ul class="linkssociais">
+                <li><a href="https://www.facebook.com.br" target="_blank">facebook</a></li>
+                <li><a href="https://www.instagram.com.br" target="_blank">Instagran</a></li>
+                <li><a href="https://www.whatsapp.com" target="_blank">WhatsApp</a></li>
+                <li><a href="https://www.gmail.com.br" target="_blank">E-mail</a></li>
+            </ul>
+        </section>
+        <div id="Pagamento">
+            <p>Formas de Pagamento</p>
         </div>
-       
-        <footer>
-            <nav class="redesociais">
-                <ul class="redesociais">
-                    <li><a href="https://www.facebook.com.br" target="_blank">facebook</a></li>
-                    <li><a href="https://www.instagram.com.br" target="_blank">Instagran</a></li>
-                    <li><a href="https://www.whatsapp.com" target="_blank">WhatsApp</a></li>
-                    <li><a href="https://www.gmail.com.br" target="_blank">E-mail</a></li>
-                </ul>
-            </nav>
-            <div class="Pagamento">
-                <p>Formas de Pagamento</p>
-            </div>
-            <div class="formasPagamento">
-                    <img src="img/cartaoCredito (1).png" width="40" height="40">VSIA</img>
-                    <img src="img/cartaoCredito (2).png" width="40" height="40">ELO</img>
-                    <img src="img/pix.png" width="40" height="40">PIX</a>
-            </div>
-            <div class="localizacao">
-                <p>Localização</p>
-            </div>
-            <div class="localizacao">
-                <a href="https://g.co/kgs/tmYPi1n" target="_blank">
-                    <img src="img/icone de localização.png" width="50" height="50">
-                </a>
-            </div>
+        <div id="formasPagamento">
+            <img src="img/cartaoCredito (1).png" width="40" height="40"></img>
+            <img src="img/cartaoCredito (2).png" width="40" height="40"></img>
+            <img src="img/pix.png" width="40" height="40"></a>
+        </div>
+        <div id="nomes">
+            <ul>
+                <li>VISA</li>
+                <li>ELO</li>
+                <li>PIX</li>
+            </ul>
+        </div>
 
-        </footer>
-
-        <a href="#top" title="Voltar ao topo">
-            <img src="img/seta-para-cima.png" width="50" height="50" alt="Voltar ao topo">
-        </a>
+        <div id="localizacao">
+            <p>Localização</p>
+            <a href="https://g.co/kgs/tmYPi1n" target="_blank">
+                <img src="img/icone de localização.png" width="50" height="50">
+            </a>
+        </div>
+    </footer>
+    <a href="#top" title="Voltar ao topo">
+        <img src="img/seta-para-cima.png" width="50" height="50" alt="Voltar ao topo">
+    </a>
 
 </body>
 
