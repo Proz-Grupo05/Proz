@@ -176,3 +176,21 @@ categories.forEach(category => {
   
   categoriesContainer.appendChild(productCategoryContainer);
 });
+
+/*Brenno: adicionei isso so para poder modificar o botao de login, quero que mude pro nome do user*/
+document.addEventListener("DOMContentLoaded", () => {
+  const nomeUsuario = localStorage.getItem("usuarioLogado");
+  if (nomeUsuario) {
+      const loginBtn = document.querySelector('.top-menu-cart a[href="../login/login.html"]:first-child');
+
+      if (loginBtn) {
+          loginBtn.innerHTML = `<i class="fas fa-user icon"></i>${JSON.parse(nomeUsuario)}`; 
+          loginBtn.href = "#"; 
+          loginBtn.addEventListener("click", (e) => {
+              e.preventDefault(); 
+              localStorage.removeItem("usuarioLogado"); 
+              window.location.href = "home.html"; 
+          });
+      }
+  }
+});
