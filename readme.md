@@ -9,7 +9,9 @@
     - [1. Produtos em Promoção (`products-on-sale`)](#1-produtos-em-promoção-products-on-sale)
     - [2. Categorias](#2-categorias)
     - [3. Marcas](#3-marcas)
-
+- [Cadastro](#cadastro)
+  - [Commit 1: Validação dinâmica do formulário de Cadastro]
+  (#commit-1-validação-dinâmica-do-formulário)
 ---
 
 ## 🏠 HOME
