@@ -6,6 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const erroSenha = document.getElementById("erro-senha");
     const btnEsqueciSenha = document.getElementById("esqueci-senha");
 
+    const usuarioLogado = localStorage.getItem("usuarioLogado");
+    if (usuarioLogado) {
+        mostrarToast(`Você já está logado como ${JSON.parse(usuarioLogado)}`);
+        setTimeout(() => {
+            window.location.href = "../home/home.html";
+        }, 1800);
+    }
+
     form.addEventListener("submit", (e) => {
         e.preventDefault();
 

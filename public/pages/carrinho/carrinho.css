@@ -1,0 +1,128 @@
+.cart-container {
+    max-width: 960px;
+    margin: 32px auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .cart-container h1 {
+    color: var(--color-darker, #29482a);
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 2px rgba(128, 128, 128, 0.9);
+    align-items: center;
+  }
+  
+  .cart-item-img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .cart-item-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .cart-item-details h3 {
+    color: var(--color-darker, #29482a);
+    font-weight: 600;
+  }
+  
+  .cart-item-details p {
+    color: #333;
+  }
+  
+  .remove-button {
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-button:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+  }
+  
+  .cart-empty {
+    text-align: center;
+    color: #666;
+    font-size: 1.2em;
+  }
+  
+  .cart-summary {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 2px rgba(128, 128, 128, 0.9);
+    text-align: right;
+  }
+  
+  .cart-summary h2 {
+    color: var(--color-darker, #29482a);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .cart-summary p {
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .checkout-button {
+    background-color: rgba(159, 201, 71, 0.5);
+    color: var(--color-darker, #29482a);
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout-button:hover {
+    background-color: var(--color-highlight, #9fc947);
+    color: white;
+  }
+  
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(41, 72, 42, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .toast.show {
+    opacity: 1;
+  }

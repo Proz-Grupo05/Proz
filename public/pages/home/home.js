@@ -14,7 +14,7 @@ const products = [
   {
     title: "Arroz Branco Tipo 1 Tio Urbano (2kg)",
     price: "R$15,57 / un",
-    imgSrc: "../../../assets/arroz-branco-tipo-1-tio-urbano-pacote-2kg.png",
+    imgSrc: "../../../assets/arroz-branco-tio-urbano-pacote-2kg.png",
     imgAlt: "Arroz Branco Tipo 1 Tio Urbano (2kg)"
   },
   {
@@ -61,78 +61,38 @@ const products = [
   }
 ];
 
-const productsContainer = document.querySelector(".products-on-sale");
-
-products.forEach(product => {
-  const productCard = document.createElement("article");
-  productCard.classList.add("product");
-
-  productCard.innerHTML = `
-  <div class="product-img-btn">
-    <button class="add-button">
-      <i class="fa-solid fa-plus"></i>
-    </button>
-    <div class="product-img">
-      <img src="${product.imgSrc}" alt="${product.imgAlt}" />
-    </div>
-  </div>
-  <div class="product-description">
-    <h2 class="product-title">${product.price}</h2>
-    <p class="product-quantity">${product.price}</p>
-  </div>
-  `;
-
-  productsContainer.appendChild(productCard);
-})
-
 const brands = [
   {
     name: "Nestlé",
     imgSrc: "../../../assets/nestle-logo-2.svg",
-    imgAlt: "Nestlé", 
-    href: "#nestle"
+    imgAlt: "Nestlé",
+    href: "../categorias/nestle.html"
   },
   {
     name: "Unilever",
     imgSrc: "../../../assets/unilever-seeklogo.png",
-    imgAlt: "Unilever", 
-    href: "#unilever"
+    imgAlt: "Unilever",
+    href: "../categorias/unilever.html"
   },
   {
     name: "Sadia",
     imgSrc: "../../../assets/sadia.svg",
-    imgAlt: "Sadia", 
-    href: "#sadia"
+    imgAlt: "Sadia",
+    href: "../categorias/sadia.html"
   },
   {
     name: "Ambev",
     imgSrc: "../../../assets/cervejaria-ambev-seeklogo.svg",
-    imgAlt: "Ambev", 
-    href: "#ambev"
+    imgAlt: "Ambev",
+    href: "../categorias/ambev.html"
   },
   {
     name: "Lacta",
     imgSrc: "../../../assets/lacta-logo.svg",
-    imgAlt: "Lacta", 
-    href: "#lacta"
-  },
-]
-
-const brandsContainer = document.querySelector(".product-brand");
-
-brands.forEach(brand => {
-  const productBrand = document.createElement("div");
-
-  productBrand.classList.add("brand-icon");  
-  productBrand.innerHTML = 
-    `
-    <a href="../categorias/categorias.html">
-      <img class="category-icon" src="${brand.imgSrc}" alt="${brand.imgAlt}" />
-    </a>
-    `
-
-    brandsContainer.appendChild(productBrand);
-})
+    imgAlt: "Lacta",
+    href: "../categorias/lacta.html"
+  }
+];
 
 const categories = [
   {
@@ -155,42 +115,135 @@ const categories = [
     name: "Higiene",
     img: "../../../assets/higiene-pessoal.svg"
   }
-]
+];
 
-const categoriesContainer = document.querySelector(".product-categories");
+if (typeof window.addToCart !== "function") {
+  window.addToCart = function (product) {
+    let cart = JSON.parse(localStorage.getItem("carrinho")) || []; 
+    
+    const existingProduct = cart.find(item => item.title === product.title);
+    if (existingProduct) {
+      existingProduct.quantity = (existingProduct.quantity || 1) + 1;
+    } else {
+      cart.push({ ...product, quantity: 1 });
+    }
+    
+    localStorage.setItem("carrinho", JSON.stringify(cart));  
+    
+    mostrarToast(`${product.title} adicionado ao carrinho!`);
+    
+    if (typeof window.updateCartButton === "function") {
+      window.updateCartButton();
+    }
+  };
+}
 
-categories.forEach(category => {
-  const productCategoryContainer = document.createElement("div");
-  productCategoryContainer.classList.add("product-category-container");
-  
-  productCategoryContainer.innerHTML = `
-    <a class="product-category" href="../categorias/categorias.html">
-      <img class="category-icon" src="${category.img}" alt="${category.name}" />
-    </a>
-    <div class="product-category-description">
-      <a href="../categorias/${category.name.toLowerCase()}.html">
-        <h3>${category.name.toUpperCase()}</h3>
-      </a>
-    </div>
-  `;
-  
-  categoriesContainer.appendChild(productCategoryContainer);
-});
-
-/*Brenno: adicionei isso so para poder modificar o botao de login, quero que mude pro nome do user*/
 document.addEventListener("DOMContentLoaded", () => {
-  const nomeUsuario = localStorage.getItem("usuarioLogado");
-  if (nomeUsuario) {
-      const loginBtn = document.querySelector('.top-menu-cart a[href="../login/login.html"]:first-child');
+  const productsContainer = document.querySelector(".products-on-sale");
+  if (productsContainer) {
+    products.forEach(product => {
+      const productCard = document.createElement("article");
+      productCard.classList.add("product");
+      productCard.innerHTML = `
+        <div class="product-img-btn">
+          <button class="add-button">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="product-img">
+            <img src="${product.imgSrc}" alt="${product.imgAlt}" />
+          </div>
+        </div>
+        <div class="product-description">
+          <h2 class="product-title">${product.title}</h2>
+          <p class="product-quantity">${product.price}</p>
+        </div>
+      `;
+      const addButton = productCard.querySelector(".add-button");
+      addButton.addEventListener("click", () => {
+        window.addToCart(product);
+      });
+      productsContainer.appendChild(productCard);
+    });
+  }
 
-      if (loginBtn) {
-          loginBtn.innerHTML = `<i class="fas fa-user icon"></i>${JSON.parse(nomeUsuario)}`; 
-          loginBtn.href = "#"; 
-          loginBtn.addEventListener("click", (e) => {
-              e.preventDefault(); 
-              localStorage.removeItem("usuarioLogado"); 
-              window.location.href = "home.html"; 
-          });
-      }
+  const brandsContainer = document.querySelector(".product-brand");
+  if (brandsContainer) {
+    brands.forEach(brand => {
+      const productBrand = document.createElement("div");
+      productBrand.classList.add("brand-icon");
+      productBrand.innerHTML = `
+        <a href="${brand.href}">
+          <img class="category-icon" src="${brand.imgSrc}" alt="${brand.imgAlt}" />
+        </a>
+      `;
+      brandsContainer.appendChild(productBrand);
+    });
+  }
+
+  const categoriesContainer = document.querySelector(".product-categories");
+  if (categoriesContainer) {
+    categories.forEach(category => {
+      const productCategory = document.createElement("div");
+      productCategory.classList.add("product-category-container");
+      productCategory.innerHTML = `
+        <a class="product-category" href="../categorias/${category.name.toLowerCase()}.html">
+          <img class="category-icon" src="${category.img}" alt="${category.name}" />
+        </a>
+        <div class="product-category-description">
+          <a href="../categorias/${category.name.toLowerCase()}.html">
+            <h3>${category.name.toUpperCase()}</h3>
+          </a>
+        </div>
+      `;
+      categoriesContainer.appendChild(productCategory);
+    });
+  }
+
+  const loginBtn = document.querySelector(".login-btn");
+  if (loginBtn) {
+    const usuarioLogado = localStorage.getItem("usuarioLogado");
+
+    if (usuarioLogado) {
+      const nomeUsuario = JSON.parse(usuarioLogado);
+      loginBtn.innerHTML = `<i class="fas fa-user icon"></i>${nomeUsuario}`;
+
+      loginBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        localStorage.removeItem("usuarioLogado");
+
+        mostrarToast("Logout realizado com sucesso!");
+
+        setTimeout(() => {
+          loginBtn.innerHTML = `<i class="fas fa-user icon"></i>Entrar`;
+          loginBtn.href = "../login/login.html";
+          window.location.reload();
+        }, 500);
+
+        return false;
+      });
+
+      loginBtn.removeAttribute("href");
+    }
   }
 });
+
+if (typeof mostrarToast !== "function") {
+  function mostrarToast(mensagem) {
+    let toast = document.getElementById("toast");
+
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "toast";
+      toast.className = "toast";
+      document.body.appendChild(toast);
+    }
+
+    toast.textContent = mensagem;
+    toast.classList.add("show");
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 1800);
+  }
+}
