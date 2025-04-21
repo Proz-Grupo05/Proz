@@ -137,7 +137,7 @@ h3 {
 #imgantiga {
     display: table-cell;
     float: left;
-    margin-left: -5%;
+    margin-left: -10%;
     margin-bottom: 30px;
 }
 
@@ -159,7 +159,7 @@ h3 {
 }
 
 footer {
-    background-color: #333333c8;
+    background-color: #525151c8;
     color: #fff;
     padding: 20px;
     text-align: center;
