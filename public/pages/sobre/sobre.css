@@ -22,7 +22,7 @@ body {
     margin: 0 auto;
     padding: 1px;
     margin: 10px;
-    background: var(--color-background);
+    /*background: var(--color-background);*/
     border-radius: 10px;
 
 
@@ -129,7 +129,7 @@ h3 {
 }
 
 #fotoatual {
-    margin-left: 80px;
+    margin-left: 0px;
     display: block;
     width: 3px;
 }
