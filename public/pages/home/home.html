@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="../../../menu.css">
+    <link rel="stylesheet" href="../../../rodape.css">
+    <link rel="stylesheet" href="home.css">
     
     <title>Supermercado</title>
   </head>
@@ -13,12 +15,12 @@
 
     <header>
       <nav class="top-menu" aria-label="Main navigation">
-        <a href="#home">
-          <img id="logo-menu" src="./assets/compre-bem-no-bg-120x120.png" alt="Logotipo do mercado">
+        <a href="../home/home.html">
+          <img id="logo-menu" src="../../src/assets/compre-bem-no-bg-120x120.png" alt="Logotipo do mercado">
         </a>
         <div class="top-menu-container-navs">
           <ul class="top-menu-links">
-            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="../sobre/sobre.html">Sobre</a></li>
           </ul>
           <div class="top-menu-container-search-cart">
             <form class="top-menu-form" method="get">
@@ -27,281 +29,353 @@
             </form>
             <ul class="top-menu-cart">
               <li><a href="../login/login.html"><i class="fas fa-user icon"></i>Entrar</a></li>
-              <li><a href="#carrinho"><i class="fas fa-shopping-cart icon"></i>Carrinho</a></li>
+              <li><a href="../login/login.html"><i class="fas fa-shopping-cart icon"></i>Carrinho</a></li>
             </ul>
           </div>
         </div>
       </nav>
       <nav class="category-menu" aria-label="Categorias do Supermercado">
         <ul>
-            <li><a href="#mercearia">MERCEARIA</a></li>
-            <li><a href="#bebidas">BEBIDAS</a></li>
-            <li><a href="#padaria">PADARIA</a></li>
-            <li><a href="#frios">FRIOS</a></li>
-            <li><a href="#açougue">AÇOUGUE</a></li>
-            <li><a href="#higiene">HIGIENE</a></li>
-            <li><a href="#limpeza">LIMPEZA</a></li>
+            <li><a href="../categorias/categorias.html">PADARIA</a></li>
+            <li><a href="../categorias/categorias.html">CARNES</a></li>
+            <li><a href="../categorias/categorias.html">BEBIDAS</a></li>
+            <li><a href="../categorias/categorias.html">HIGIENE</a></li>
+            <li><a href="../categorias/categorias.html">LIMPEZA</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-        <section class="slideshow">
-          <img class="img-slideshow" style="width: 960px" src="https://fastly.picsum.photos/id/6/5000/3333.jpg?hmac=pq9FRpg2xkAQ7J9JTrBtyFcp9-qvlu8ycAi7bUHlL7I" alt="Banner 1" class="slide" />
-          <img class="img-slideshow" style="width: 960px" src="https://fastly.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I" alt="Banner 2" class="slide" />
-          <img class="img-slideshow" style="width: 960px" src="https://fastly.picsum.photos/id/26/4209/2769.jpg?hmac=vcInmowFvPCyKGtV7Vfh7zWcA_Z0kStrPDW3ppP0iGI" alt="Banner 3" class="slide" />
-        </section>
+      <section class="slideshow">
+          <a href="../categorias/categorias.html">
+          <img class="img-slideshow" style="width: 960px" src="../../../assets/banner-pascoa.png" alt="Banner 1" class="slide" />
+        </a>
+      </section>
 
-        <section class="products-on-sale">
-          <article class="produto">
-            <img src="https://fastly.picsum.photos/id/302/200/200.jpg?hmac=pq7hvNyk4pwuEe5cs2qejMNTc7S1kgev72rC8bSHdJE" alt="Nome do produto 1" />
-            <h2 class="product-title">Nome do produto 1</h2>
-            <h3 class="product-brand">Marca do produto 1</h3>
-            <p class="product-quantity">Peso / unidades</p>
-            <button class="add-button">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </article>
-        
-          <article class="produto">
-            <img src="https://fastly.picsum.photos/id/1071/200/200.jpg?hmac=mb6el6MCnRCyFnuMcCPJppn1WISnV5OKFUqDFg82Joo" alt="Nome do produto 2" />
-            <h2 class="product-title">Nome do produto 2</h2>
-            <h3 class="product-brand">Marca do produto 2</h3>
-            <p class="product-quantity">Peso / unidades</p>
-            <button class="add-button">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </article>
-        
-          <article class="produto">
-            <img src="https://fastly.picsum.photos/id/432/200/200.jpg?hmac=b4-kxXh_oTpvCBH9hueJurvHDdhy0eYNNba-mO9Q8bU" alt="Nome do produto 3" />
-            <h2 class="product-title">Nome do produto 3</h2>
-            <h3 class="product-brand">Marca do produto 3</h3>
-            <p class="product-quantity">Peso / unidades</p>
-            <button class="add-button">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </article>
-        
-          <article class="produto">
-            <img src="https://fastly.picsum.photos/id/9/200/200.jpg?hmac=KeGvZtsfErXTVxRSy5Kev3vLnJBdBYcYoGviv8RE5Vk" alt="Nome do produto 4" />
-            <h2 class="product-title">Nome do produto 4</h2>
-            <h3 class="product-brand">Marca do produto 4</h3>
-            <p class="product-quantity">Peso / unidades</p>
-            <button class="add-button">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </article>
-        
-          <article class="produto">
-            <img src="https://fastly.picsum.photos/id/5/200/200.jpg?hmac=oN9VtXdJYLSFssji8vCr48JaI-e5Zi4eH9GAiYBB_Ig" alt="Nome do produto 5" />
-            <h2 class="product-title">Nome do produto 5</h2>
-            <h3 class="product-brand">Marca do produto 5</h3>
-            <p class="product-quantity">Peso / unidades</p>
-            <button class="add-button">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </article>
-        
-          <article class="produto">
-            <img src="https://fastly.picsum.photos/id/906/200/200.jpg?hmac=jQ-m5xgglMRMPvZhK3539qEkxPG1FVUae6AeV_HKQfg" alt="Nome do produto 6" />
-            <h2 class="product-title">Nome do produto 6</h2>
-            <h3 class="product-brand">Marca do produto 6</h3>
-            <p class="product-quantity">Peso / unidades</p>
-            <button class="add-button">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </article>
-        
-          <article class="produto">
-            <img src="https://fastly.picsum.photos/id/531/200/200.jpg?hmac=PE_UHXALavopqDJ2V1rSz0nCsrJQX3c6rgUPXndBkwo" alt="Nome do produto 7" />
-            <h2 class="product-title">Nome do produto 7</h2>
-            <h3 class="product-brand">Marca do produto 7</h3>
-            <p class="product-quantity">Peso / unidades</p>
-            <button class="add-button">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </article>
-        
-          <article class="produto">
-            <img src="https://fastly.picsum.photos/id/600/200/200.jpg?hmac=x3_SXBDfy4wqgriXAHmONXmt4rEB-k8sVoY7P5q8Bgs" alt="Nome do produto 8" />
-            <h2 class="product-title">Nome do produto 8</h2>
-            <h3 class="product-brand">Marca do produto 8</h3>
-            <p class="product-quantity">Peso / unidades</p>
-            <button class="add-button">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </article>
-        
-          <article class="produto">
-            <img src="https://fastly.picsum.photos/id/76/200/200.jpg?hmac=psXm-BMm4NaZlO_dAn3FH6ahWyqXeDxPEkz5hU8XVqM" alt="Nome do produto 9" />
-            <h2 class="product-title">Nome do produto 9</h2>
-            <h3 class="product-brand">Marca do produto 9</h3>
-            <p class="product-quantity">Peso / unidades</p>
-            <button class="add-button">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </article>
-        
-          <article class="produto">
-            <img src="https://fastly.picsum.photos/id/603/200/200.jpg?hmac=0BCtNqTfCvRnGEYZ9CJPnBJ8RjT9g0wRO3iDtLHWcnY" alt="Nome do produto 10" />
-            <h2 class="product-title">Nome do produto 10</h2>
-            <h3 class="product-brand">Marca do produto 10</h3>
-            <p class="product-quantity">Peso / unidades</p>
-            <button class="add-button">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </article>
-        </section>   
+      <section class="products-on-sale">
 
-
-        <section class="product-categories">
-
-          <div class="product-categories">
-            <div class="product-category">
-              <a href="#categoria1">
-                <img class="category-icon" src="https://fastly.picsum.photos/id/488/200/200.jpg?hmac=V8mvdG1ON09kNw80-qS00BSFq5gGhqRYoYPJftrsYA8" alt="Ícone da categoria 1" />
-                <h3>Categoria 1</h3>
-              </a>
+        <article class="product">
+          <div class="product-img-btn">
+            <button class="add-button">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="product-img">
+              <img src="../../../assets/pao-frances.jpg" alt="Pão Francês" />
             </div>
-
-            <div class="product-category">
-              <a href="#categoria2">
-                <img class="category-icon" src="https://fastly.picsum.photos/id/488/200/200.jpg?hmac=V8mvdG1ON09kNw80-qS00BSFq5gGhqRYoYPJftrsYA8" alt="Ícone da categoria 2" />
-              <h3>Categoria 2</h3>
-              </a>
-            </div>
-
-            <div class="product-category">
-              <a href="#categoria3">
-                <img class="category-icon" src="https://fastly.picsum.photos/id/488/200/200.jpg?hmac=V8mvdG1ON09kNw80-qS00BSFq5gGhqRYoYPJftrsYA8" alt="Ícone da categoria 3" />
-              <h3>Categoria 3</h3>
-              </a>
-            </div>
-
-            <div class="product-category">
-              <a href="#categoria4">
-              <img class="category-icon" src="https://fastly.picsum.photos/id/488/200/200.jpg?hmac=V8mvdG1ON09kNw80-qS00BSFq5gGhqRYoYPJftrsYA8" alt="Ícone da categoria 4" />
-              <h3>Categoria 4</h3>
-              </a>
-            </div>
-
-            <div class="product-category">
-              <a href="#categoria5">
-                <img class="category-icon" src="https://fastly.picsum.photos/id/488/200/200.jpg?hmac=V8mvdG1ON09kNw80-qS00BSFq5gGhqRYoYPJftrsYA8" alt="Ícone da categoria 5" />
-              <h3>Categoria 5</h3>
-              </a>
-            </div>
-
           </div>
-        </section>
-
-        <section class="product-brands">
-          <div class="product-brand">
-
-            <div class="brand-icon">
-              <a href="#marca1">
-                <img class="category-icon" src="https://fastly.picsum.photos/id/70/200/200.jpg?hmac=hRU7tEHltyLUTf0bCrAWFXlPRXOBTsvCcvL-dIUG2CE" alt="Ícone da marca 1" />
-                <h3>Marca 1</h3>
-              </a>
-            </div>
-
-            <div class="brand-icon">
-              <a href="#marca2">
-                <img class="category-icon" src="https://fastly.picsum.photos/id/70/200/200.jpg?hmac=hRU7tEHltyLUTf0bCrAWFXlPRXOBTsvCcvL-dIUG2CE" alt="Ícone da marca 2" />
-                <h3>Marca 2</h3>
-              </a>
-            </div>
-
-            <div class="brand-icon">
-              <a href="#marca3">
-                <img class="category-icon" src="https://fastly.picsum.photos/id/70/200/200.jpg?hmac=hRU7tEHltyLUTf0bCrAWFXlPRXOBTsvCcvL-dIUG2CE" alt="Ícone da marca 3" />
-                <h3>Marca 3</h3>
-              </a>
-            </div>
-
-            <div class="brand-icon">
-              <a href="#marca4">
-                <img class="category-icon" src="https://fastly.picsum.photos/id/70/200/200.jpg?hmac=hRU7tEHltyLUTf0bCrAWFXlPRXOBTsvCcvL-dIUG2CE" alt="Ícone da marca 4" />
-                <h3>Marca 4</h3>
-              </a>
-            </div>
-
-            <div class="brand-icon">
-              <a href="marca5">
-                <img class="category-icon" src="https://fastly.picsum.photos/id/70/200/200.jpg?hmac=hRU7tEHltyLUTf0bCrAWFXlPRXOBTsvCcvL-dIUG2CE" alt="Ícone da marca 5" />
-                <h3>Marca 5</h3>
-              </a>
-            </div>
-
+          <div class="product-description">
+            <h2 class="product-title">Pão francês</h2>
+            <p class="product-quantity">R$12,89 / kg</p>
           </div>
-        </section>
+        </article>
+      
+        <article class="product">
+          <div class="product-img-btn">
+            <button class="add-button">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="product-img">
+              <img src="../../../assets/acem-bovino.jpeg" alt="Acém bovino" />
+            </div>
+          </div>
+          <div class="product-description">
+            <h2 class="product-title">Acém bovino</h2>
+            <p class="product-quantity">R$32,99 / kg</p>
+          </div>
+        </article>
+      
+        <article class="product">
+          <div class="product-img-btn">
+            <button class="add-button">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="product-img">
+              <img src="../../../assets/arroz-branco-tipo-1-tio-urbano-pacote-2kg.png" alt="Arroz Branco Tipo 1 Tio Urbano (2kg)" />
+            </div>
+          </div>
+          <div class="product-description">
+            <h2 class="product-title">Arroz Branco Tipo 1 Tio Urbano (2kg)</h2>
+            <p class="product-quantity">R$15,57 / un</p>
+          </div>
+        </article>
+      
+        <article class="product">
+          <div class="product-img-btn">
+            <button class="add-button">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="product-img">
+              <img src="../../../assets/itaipava-lata-550ml.png" alt="Cerveja Itaipava lata 550ml" />
+            </div>
+          </div>
+          <div class="product-description">
+            <h2 class="product-title">Cerveja Itaipava lata 550ml</h2>
+            <p class="product-quantity">R$5,99 / un</p>
+          </div>
+        </article>
+      
+        <article class="product">
+          <div class="product-img-btn">
+            <button class="add-button">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="product-img">
+              <img src="../../../assets/Kit Promocional Shampoo 350ml + Condicionador 175ml Dove Reconstrução + Queratina Preço Especial.png" alt="Kit Dove Reconstrução Shampoo 350ml + Condicionador 175ml" />
+            </div>
+          </div>
+          <div class="product-description">
+            <h2 class="product-title">Kit Dove Reconstrução Shampoo 350ml + Condicionador 175ml</h2>
+            <p class="product-quantity">R$19,99</p>
+          </div>
+        </article>
+      
+        <article class="product">
+          <div class="product-img-btn">
+            <button class="add-button">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="product-img">
+              <img src="../../../assets/Sabão Líquido Lavagem Perfeita Omo Galão 3Lt Lavagem Perfeita.jpg" alt="Sabão Líquido Lavagem Perfeita Omo Galão 3Lt Lavagem Perfeita" />
+            </div>
+          </div>
+          <div class="product-description">
+            <h2 class="product-title">Sabão Líquido Lavagem Perfeita Omo Galão 3L Lavagem Perfeita</h2>
+            <p class="product-quantity">R$44,90 / un</p>
+          </div>
+        </article>
+      
+        <article class="product">
+          <div class="product-img-btn">
+            <button class="add-button">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="product-img">
+              <img src="../../../assets/Azeite Espanhol Extra Virgem Borges Vd 500ml.jpg" alt="Azeite Espanhol Extra Virgem Borges Vd 500ml" />
+            </div>
+          </div>
+          <div class="product-description">
+            <h2 class="product-title">Azeite Espanhol Extra Virgem Borges Vd 500ml</h2>
+            <p class="product-quantity">R$49,90 / un</p>
+          </div>
+        </article>
+      
+        <article class="product">
+          <div class="product-img-btn">
+            <button class="add-button">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="product-img">
+              <img src="../../../assets/Massa de Arroz Zero Gluten Urbano 500g Pena.jpg" alt="Massa de Arroz Zero Gluten Urbano 500g Pena" />
+            </div>
+          </div>
+          <div class="product-description">
+            <h2 class="product-title">Massa de Arroz Zero Gluten Urbano 500g Pena</h2>
+            <p class="product-quantity">R$4,99 / un</p>
+          </div>
+        </article>
+      
+        <article class="product">
+          <div class="product-img-btn">
+            <button class="add-button">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="product-img">
+              <img src="../../../assets/Requeijão Cremoso Tradicional Vigor 200g.jpg" alt="Requeijão Cremoso Tradicional Vigor 200g" />
+            </div>
+          </div>
+          <div class="product-description">
+            <h2 class="product-title">Requeijão Cremoso Tradicional Vigor 200g</h2>
+            <p class="product-quantity">R$10,90 / un</p>
+          </div>
+        </article>
+      
+        <article class="product">
+          <div class="product-img-btn">
+            <button class="add-button">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="product-img">
+              <img src="../../../assets/Creme Dental Tripla Ação Colgate 90g Original.png" alt="Creme Dental Colgate Tripla Ação 90g" />
+            </div>
+          </div>
+          <div class="product-description">
+            <h2 class="product-title">Creme Dental Colgate Tripla Ação 90g</h2>
+            <p class="product-quantity">R$6,89 / un</p>
+          </div>
+        </article>
+      </section>
+       
+      <section class="product-categories">
+
+        <div class="product-category-container">
+          <a class="product-category" href="../categorias/categorias.html">
+            <img class="category-icon" src="../../../assets/padaria.svg" alt="Padaria" />
+          </a>
+          <div class="product-category-description">
+            <a href="../categorias/categorias.html">
+              <h3>PADARIA</h3>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-category-container">
+          <a class="product-category" href="../categorias/categorias.html">
+            <img class="category-icon" src="../../../assets/carnes.svg" alt="Carnes" />
+          </a>
+          <div class="product-category-description">
+            <a href="../categorias/categorias.html">
+              <h3>CARNES</h3>
+            </a>
+          </div>
+        </div>
+        
+        <div class="product-category-container">
+          <a class="product-category" href="../categorias/categorias.html">
+            <img class="category-icon" src="../../../assets/bebidas.svg" alt="Bebidas" />
+          </a>
+          <div class="product-category-description">
+            <a href="../categorias/categorias.html">
+              <h3>BEBIDAS</h3>
+            </a>
+          </div>
+        </div>
+        
+        <div class="product-category-container">
+          <a class="product-category" href="../categorias/categorias.html">
+            <img class="category-icon" src="../../../assets/produtos-de-limpeza.svg" alt="Limpeza" />
+          </a>
+          <div class="product-category-description">
+            <a href="../categorias/categorias.html">
+              <h3>LIMPEZA</h3>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-category-container">
+          <a class="product-category" href="../categorias/categorias.html">
+            <img class="category-icon" src="../../../assets/higiene-pessoal.svg" alt="Higiene Pessoal" />
+          </a>
+          <div class="product-category-description">
+            <a href="../categorias/categorias.html">
+              <h3>HIGIENE</h3>
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="product-brands">
+        <div class="product-brand">
+
+          <div class="brand-icon">
+            <a href="#nestle">
+              <img class="category-icon" src="../../../assets/nestle-logo-2.svg" alt="Nestlé" />
+            </a>
+          </div>
+
+          <div class="brand-icon">
+            <a href="#unilever">
+              <img class="category-icon" src="../../../assets/unilever-seeklogo.png" alt="Unilever" />
+            </a>
+          </div>
+
+          <div class="brand-icon">
+            <a href="#sadia">
+              <img class="category-icon" src="../../../assets/sadia.svg" alt="Sadia" />
+            </a>
+          </div>
+
+          <div class="brand-icon">
+            <a href="#ambev">
+              <img class="category-icon" src="../../../assets/cervejaria-ambev-seeklogo.svg" alt="Ambev" />
+            </a>
+          </div>
+
+          <div class="brand-icon">
+            <a href="lacta">
+              <img class="category-icon" src="../../../assets/lacta-logo.svg" alt="Lacta" />
+            </a>
+          </div>
+
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-      <div class="footer-column">
-        <nav class="page-links" aria-label="Page links">
-          <h2>Institucional</h2>
-          <ul>
-            <li><a href="#categorias">Categorias</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#login">Login</a></li>
-            <li><a href="#carrinho">Carrinho</a></li>
-          </ul>
-        </nav>
+      <div class="footer-columns">
 
-        <div class="social-links">
-          <h2>Redes Sociais</h2>
-          <a href="instagram.com">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="facebook.com">
-            <i class="fab fa-facebook"></i></i>
-          </a>
-          <a href="youtube.com">
-            <i class="fab fa-youtube"></i>
-          </a>
+        <div class="footer-column">
+          <nav class="page-links" aria-label="Page links">
+            <h2>INSTITUCIONAL</h2>
+            <ul>
+              <li><a href="../categorias/categorias.html">Categorias</a></li>
+              <li><a href="../sobre/sobre.html">Sobre</a></li>
+              <li><a href="../login/login.html">Login</a></li>
+              <li><a href="../login/login.html">Carrinho</a></li>
+            </ul>
+          </nav>
+  
+          <div class="social-links">
+            <h2>REDES SOCIAIS</h2>
+            <div class="container-social-links">
+              <a href="https://www.instagram.com/">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/">
+                <i class="fab fa-facebook"></i></i>
+              </a>
+              <a href="https://www.youtube.com/">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="footer-column">
+          <h2>RECEBA NOSSAS NOVIDADES</h2>
+          <p class="footer-column-text">Cadastre-se e receba promoções, novidades e descontos exclusivos.</p>
+          <form class="newsletter-inputs-container">
+            <div class="input-with-icon">
+              <i class="fas fa-user"></i>
+              <input type="text" name="name" id="name" placeholder="Digite seu nome*" required>
+            </div>
+            <div class="input-with-icon">
+              <i class="fas fa-envelope"></i>
+              <input type="email" name="email" id="email" placeholder="Digite seu email*" required>
+            </div>
+            <div class="input-with-icon input-with-icon-submit">
+              <i class="fas fa-phone"></i>
+              <input type="tel" name="tel" id="nome" placeholder="Digite seu telefone">
+              <button class="btn-newsletter-form" type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+  
+        <div class="footer-column">
+          <div class="app-download">
+            <h2>BAIXE NOSSO APP</h2>
+            <div class="container-app-download-btn">
+              <a href="https://play.google.com/store/apps">
+                <button class="app-download-btn">Download para Android</button>
+              </a>
+              <a href="https://www.apple.com/br/app-store/">
+                <button class="app-download-btn">Download para Apple</button>
+              </a>
+            </div>
+          </div>
+          <div class="customer-services">
+            <h2>ATENDIMENTO</h2>
+            <p>
+              <span><i class="fa-brands fa-whatsapp"></i></span> (48) 99999-9999
+            </p>
+            <p>Horário de atendimento:</p>
+            <p>De segunda a sábado das 08h às 22h</p>
+          </div>
         </div>
       </div>
 
-      <div class="footer-column">
-        <h2>Receba nossas novidades</h2>
-        <p>Cadastre-se e receba promoções, novidades e descontos exclusivos.</p>
-        <form class="newsletter-inputs-container">
-          <div class="input-with-icon">
-            <i class="fas fa-user"></i>
-            <input type="text" name="name" id="name" placeholder="Digite seu nome*" required>
-          </div>
-          <div class="input-with-icon">
-            <i class="fas fa-envelope"></i>
-            <input type="email" name="email" id="email" placeholder="Digite seu email*" required>
-          </div>
-          <div class="input-with-icon">
-            <i class="fas fa-phone"></i>
-            <input type="tel" name="tel" id="nome" placeholder="Digite seu telefone">
-          </div>
-          <input type="submit" value="Enviar">
-        </form>
-      </div>
-
-      <div class="footer-column">
-        <div class="app-download">
-          <h2>Baixo nosso app</h2>
-          <button>Download para Android</button>
-          <button>Download para Apple</button>
-        </div>
-        <div class="costumer-services">
-          <h2>Atendimento</h2>
-          <p>
-            <span><i class="fa-brands fa-whatsapp"></i></span> (48) 99999-9999
-          </p>
-          <p>Horário de atendimento:</p>
-          <p>De segunda a sábado das 08h às 18h</p>
-        </div>
-      </div>
-
-      <div>
-        <p>© 2025 Todos os direitos reservados. Supermercado LTDA</p>
+      <div class="copy-rigths">
+        <p>© 2025 Todos os direitos reservados. Supermercados Compre Bem</p>
       </div>
     </footer>
   </body>

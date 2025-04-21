@@ -4,121 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supermercado - Categorias</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #d3d3d3; /* Cinza claro */
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #ccc;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .search-box {
-            flex-grow: 1;
-            margin: 0 20px;
-        }
-        .search-box input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .menu-buttons, .auth-buttons {
-            display: flex;
-            gap: 10px;
-        }
-        .menu-buttons button, .auth-buttons button {
-            padding: 10px 20px;
-            border: none;
-            background-color: #a9a9a9; /* Cinza escuro */
-            color: white;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        nav {
-            background-color: #b0b0b0; /* Cinza médio */
-            padding: 10px 0;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        nav ul li {
-            display: inline;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            display: block;
-        }
-        nav ul li a:hover {
-            background-color: #808080; /* Cinza escuro */
-        }
-        .container {
-            display: flex;
-            padding: 20px;
-        }
-        .sidebar {
-            width: 25%;
-            padding: 20px;
-            border-right: 1px solid #ccc;
-        }
-        .sidebar img {
-            width: 120px;
-            height: 120px;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .products {
-            width: 75%;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-        .products img {
-            width: 120px;
-            height: 120px;
-        }
-        .show-more {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .show-more button {
-            padding: 10px 20px;
-            border: none;
-            background-color: #a9a9a9; /* Cinza escuro */
-            color: white;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        footer {
-            background-color: #d3d3d3; /* Cinza claro */
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="categorias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../menu.css">
+    <link rel="stylesheet" href="../../../rodape.css">
+    <link rel="stylesheet" href="home.css">
+
+    
 </head>
 <body>
     <header>
         <div class="menu-buttons">
             <button>Menu</button>
         </div>
-        <div class="logo">Supermercado</div>
+        <div class="top-menu"><img src="../../src/assets/compre-bem-no-bg-120x120.png" alt="Categoria 1"></div>
         <div class="search-box">
             <input type="text" placeholder="Pesquisar produtos...">
         </div>
@@ -140,76 +39,151 @@
     </nav>
     <div class="container">
         <div class="sidebar">
-            <h3>Categorias Aleatórias</h3>
+            <h3>Categorias:</h3>
             <div>
-                <img src="categoria1.jpg" alt="Categoria 1">
-                <p>Categoria 1</p>
+                <img src="../../../assets/bebidas.svg" alt="Categoria 1">
+                <p>Bebidas</p>
             </div>
             <div>
-                <img src="categoria2.jpg" alt="Categoria 2">
-                <p>Categoria 2</p>
+                <img src="../../../assets/carnes.svg" alt="Categoria 2">
+                <p>Carnes</p>
             </div>
             <div>
-                <img src="categoria3.jpg" alt="Categoria 3">
-                <p>Categoria 3</p>
+                <img src="../../../assets/higiene-pessoal.svg" alt="Categoria 3">
+                <p>Higiene Pessoal</p>
             </div>
+            <div>
+              <img src="../../../assets/padaria.svg" alt="Categoria 3">
+              <p>Padaria</p>
+          </div>
         </div>
         <div class="products">
             <div>
-                <img src="produto1.jpg" alt="Produto 1">
+                <img src="https://static.paodeacucar.com/img/uploads/1/517/24095517.jpg" alt="Produto 1">
                 <p>Produto 1</p>
             </div>
-            <div>
-                <img src="produto2.jpg" alt="Produto 2">
+            <div> 
+                <img src="https://static.paodeacucar.com/img/uploads/1/517/24095517.jpg" alt="Produto 2">
                 <p>Produto 2</p>
             </div>
             <div>
-                <img src="produto3.jpg" alt="Produto 3">
+                <img src="https://static.paodeacucar.com/img/uploads/1/517/24095517.jpg" alt="Produto 3">
                 <p>Produto 3</p>
             </div>
             <div>
-                <img src="produto4.jpg" alt="Produto 4">
+                <img src="https://static.paodeacucar.com/img/uploads/1/517/24095517.jpg" alt="Produto 4">
                 <p>Produto 4</p>
             </div>
             <div>
-                <img src="produto5.jpg" alt="Produto 5">
+                <img src="../../../assets/arroz-branco-tipo-1-tio-urbano-pacote-2kg.png" alt="Produto 5">
                 <p>Produto 5</p>
             </div>
             <div>
-                <img src="produto6.jpg" alt="Produto 6">
+                <img src="../../../assets/itaipava-lata-550ml.png" alt="Produto 6">
                 <p>Produto 6</p>
             </div>
             <div>
-                <img src="produto7.jpg" alt="Produto 7">
+                <img src="../../../assets/acem-bovino.jpeg" alt="Produto 7">
                 <p>Produto 7</p>
             </div>
             <div>
-                <img src="produto8.jpg" alt="Produto 8">
+                <img src="../../../assets/Azeite Espanhol Extra Virgem Borges Vd 500ml.jpg" alt="Produto 8">
                 <p>Produto 8</p>
             </div>
             <div>
-                <img src="produto9.jpg" alt="Produto 9">
+                <img src="../../../assets/pao-frances.jpg" alt="Produto 9">
                 <p>Produto 9</p>
             </div>
             <div>
-                <img src="produto10.jpg" alt="Produto 10">
+                <img src="https://static.paodeacucar.com/img/uploads/1/517/24095517.jpg" alt="Produto 10">
                 <p>Produto 10</p>
             </div>
             <div>
-                <img src="produto11.jpg" alt="Produto 11">
+                <img src="../../../assets/Creme Dental Tripla Ação Colgate 90g Original.png" alt="Produto 11">
                 <p>Produto 11</p>
             </div>
             <div>
-                <img src="produto12.jpg" alt="Produto 12">
+                <img src="../../../assets/Sabão Líquido Lavagem Perfeita Omo Galão 3Lt Lavagem Perfeita.jpg" alt="Produto 12">
                 <p>Produto 12</p>
             </div>
         </div>
     </div>
     <div class="show-more">
         <button>Mostrar Mais</button>
+
     </div>
-    <footer>
-        <p>Rodapé do Supermercado</p>
+    <footer class="footer">
+      <div class="footer-columns">
+
+        <div class="footer-column">
+          <nav class="page-links" aria-label="Page links">
+            <h2>INSTITUCIONAL</h2>
+            <ul>
+              <li><a href="#categorias">Categorias</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#login">Login</a></li>
+              <li><a href="#carrinho">Carrinho</a></li>
+            </ul>
+          </nav>
+  
+          <div class="social-links">
+            <h2>REDES SOCIAIS</h2>
+            <div class="container-social-links">
+              <a href="instagram.com">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="facebook.com">
+                <i class="fab fa-facebook"></i></i>
+              </a>
+              <a href="youtube.com">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="footer-column">
+          <h2>RECEBA NOSSAS NOVIDADES</h2>
+          <p class="footer-column-text">Cadastre-se e receba promoções, novidades e descontos exclusivos.</p>
+          <form class="newsletter-inputs-container">
+            <div class="input-with-icon">
+              <i class="fas fa-user"></i>
+              <input type="text" name="name" id="name" placeholder="Digite seu nome*" required>
+            </div>
+            <div class="input-with-icon">
+              <i class="fas fa-envelope"></i>
+              <input type="email" name="email" id="email" placeholder="Digite seu email*" required>
+            </div>
+            <div class="input-with-icon input-with-icon-submit">
+              <i class="fas fa-phone"></i>
+              <input type="tel" name="tel" id="nome" placeholder="Digite seu telefone">
+              <button class="btn-newsletter-form" type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+  
+        <div class="footer-column">
+          <div class="app-download">
+            <h2>BAIXE NOSSO APP</h2>
+            <div class="container-app-download-btn">
+              <button class="app-download-btn">Download para Android</button>
+              <button class="app-download-btn">Download para Apple</button>
+            </div>
+          </div>
+          <div class="customer-services">
+            <h2>ATENDIMENTO</h2>
+            <p>
+              <span><i class="fa-brands fa-whatsapp"></i></span> (48) 99999-9999
+            </p>
+            <p>Horário de atendimento:</p>
+            <p>De segunda a sábado das 08h às 22h</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="copy-rigths">
+        <p>© 2025 Todos os direitos reservados. Supermercados Compre Bem</p>
+      </div>
     </footer>
 </body>
 </html>
