@@ -169,3 +169,14 @@ input:focus {
   width: 300px;
   /* border: 2px solid red; */
 }
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 4px;
+  display: block;
+}
+
+.input-valid {
+  border: 2px solid green;
+}
