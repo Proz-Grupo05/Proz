@@ -1,12 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0; url=home.html">
-  <title>Supermercado Compre Bem</title>
-</head>
-<body>
-  Se você não for redirecionado automaticamente, <a href="home.html">clique aqui</a>.
-</body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../menu.css">
+    <link rel="stylesheet" href="../../../rodape.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="../../../carrinho.js" defer></script>
+    <script src="home.js" defer></script>
+    <script src="../../../rodape.js" defer></script>
+    <title>Supermercado Compre Bem</title>
+  </head>
+  <body>
+    <header>
+      <nav class="top-menu" aria-label="Main navigation">
+        <a href="../home/index.html">
+          <img id="logo-menu" src="../../src/assets/compre-bem-no-bg-120x120.png" alt="Logotipo do mercado">
+        </a>
+        <div class="top-menu-container-navs">
+          <ul class="top-menu-links">
+            <li><a href="../sobre/sobre.html">Sobre</a></li>
+          </ul>
+          <div class="top-menu-container-search-cart">
+            <form class="top-menu-form" action="../categorias/categorias.html" method="get">
+              <input type="text" name="search" placeholder="Buscar por produto, marca ou categoria" aria-label="Buscar produtos" />
+              <button class="btn-icon" type="submit" aria-label="Pesquisar"><i class="fas fa-search"></i></button>
+            </form>
+            <ul class="top-menu-cart">
+              <li><a href="../login/login.html" class="login-btn"><i class="fas fa-user icon"></i>Entrar</a></li>
+              <li><a href="../carrinho/carrinho.html" class="cart-btn"><i class="fas fa-shopping-cart icon"></i>Carrinho</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="category-menu" aria-label="Categorias do Supermercado">
+        <ul>
+          <li><a href="../categorias/categorias.html">PADARIA</a></li>
+          <li><a href="../categorias/categorias.html">CARNES</a></li>
+          <li><a href="../categorias/categorias.html">BEBIDAS</a></li>
+          <li><a href="../categorias/categorias.html">HIGIENE</a></li>
+          <li><a href="../categorias/categorias.html">LIMPEZA</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="slideshow">
+        <a href="../categorias/categorias.html">
+          <img class="img-slideshow" style="width: 960px" src="../../../assets/banner-pascoa.png" alt="Banner 1" class="slide" />
+        </a>
+      </section>
+      <section class="products-on-sale">
+      </section>
+      <section class="product-categories">
+        <div class="product-category-container">
+        </div>
+      </section>
+      <section class="product-brands">
+        <div class="product-brand">
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <nav class="page-links" aria-label="Page links">
+            <h2>INSTITUCIONAL</h2>
+            <ul>
+              <li><a href="../categorias/categorias.html">Categorias</a></li>
+              <li><a href="../sobre/sobre.html">Sobre</a></li>
+              <li><a href="../login/login.html">Login</a></li>
+              <li><a href="../carrinho/carrinho.html">Carrinho</a></li>
+            </ul>
+          </nav>
+          <div class="social-links">
+            <h2>REDES SOCIAIS</h2>
+            <div class="container-social-links">
+              <a href="https://www.instagram.com/" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="https://www.youtube.com/" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h2>RECEBA NOSSAS NOVIDADES</h2>
+          <p class="footer-column-text">Cadastre-se e receba promoções, novidades e descontos exclusivos.</p>
+          <form class="newsletter-inputs-container" action="#" method="post">
+            <div class="input-with-icon">
+              <i class="fas fa-user"></i>
+              <input type="text" name="name" id="footer-name" placeholder="Digite seu nome*" required aria-label="Nome">
+            </div>
+            <span class="error-message" id="name-error"></span>
+            <div class="input-with-icon">
+              <i class="fas fa-envelope"></i>
+              <input type="email" name="email" id="footer-email" placeholder="Digite seu email*" required aria-label="Email">
+            </div>
+            <span class="error-message" id="email-error"></span>
+            <div class="input-with-icon input-with-icon-submit">
+              <i class="fas fa-phone"></i>
+              <input type="tel" name="tel" id="footer-tel" placeholder="Digite seu telefone" aria-label="Telefone">
+              <button class="btn-newsletter-form" type="submit" aria-label="Enviar formulário">Enviar</button>
+            </div>
+            <span class="error-message" id="phone-error"></span>
+          </form>
+        </div>
+        <div class="footer-column">
+          <div class="app-download">
+            <h2>BAIXE NOSSO APP</h2>
+            <div class="container-app-download-btn">
+              <a href="https://play.google.com/store/apps" aria-label="Download para Android">
+                <button class="app-download-btn">Download para Android</button>
+              </a>
+              <a href="https://www.apple.com/br/app-store/" aria-label="Download para Apple">
+                <button class="app-download-btn">Download para Apple</button>
+              </a>
+            </div>
+          </div>
+          <div class="customer-services">
+            <h2>ATENDIMENTO</h2>
+            <p>
+              <span><i class="fa-brands fa-whatsapp"></i></span> (48) 99999-9999
+            </p>
+            <p>Horário de atendimento:</p>
+            <p>De segunda a sábado das 08h às 22h</p>
+          </div>
+        </div>
+      </div>
+      <div class="copy-rigths">
+        <p>© 2025 Todos os direitos reservados. Supermercados Compre Bem</p>
+      </div>
+    </footer>
+  </body>
 </html>
