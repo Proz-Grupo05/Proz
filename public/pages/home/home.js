@@ -14,7 +14,7 @@ const products = [
   {
     title: "Arroz Branco Tipo 1 Tio Urbano (2kg)",
     price: "R$15,57 / un",
-    imgSrc: "../../../assets/arroz-branco-tio-urbano-pacote-2kg.png",
+    imgSrc: "../../../assets/arroz-branco-tipo-1-tio-urbano-pacote-2kg.png",
     imgAlt: "Arroz Branco Tipo 1 Tio Urbano (2kg)"
   },
   {
