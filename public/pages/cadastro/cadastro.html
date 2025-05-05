@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="cadastro.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="cadastro.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <h1>Cadastro</h1>
-        <a href="../home/home.html">
-            <img src="https://cdn-icons-png.flaticon.com/128/3236/3236910.png" alt="Voltar">
-        </a>
-    </header>
+  <header class="cabecalho">
+    <h1>Cadastro</h1>
+    <a href="../home/home.html">
+      <img src="https://cdn-icons-png.flaticon.com/128/3236/3236910.png" alt="Voltar">
+    </a>
+  </header>
 
-    <div class="card">
-        <h3>Cadastro</h3>
-        <form action="#" method="POST" class="form">
-            <input type="text" name="usuario" placeholder="Nome de usuário" required class="input">
-            <input type="email" name="email" placeholder="E-mail" required class="input">
-            <input type="password" name="senha" placeholder="Senha" required class="input">
-            <button type="submit" class="button-submit">Cadastrar</button>
-            <a href="../login/login.html">Já possui conta? Faça login!</a>
-        </form>
-    </div>
+  <div class="card">
+    <h3>Cadastro</h3>
+    <form id="cadastroForm" class="form">
+      <input type="text" id="usuario" name="usuario" placeholder="Nome de usuário" required class="input">
+      <span id="erro-usuario" class="erro-msg"></span>
+
+      <input type="email" id="email" name="email" placeholder="E-mail" required class="input">
+      <span id="erro-email" class="erro-msg"></span>
+
+      <input type="password" id="senha" name="senha" placeholder="Senha" required class="input">
+      <span id="erro-senha" class="erro-msg"></span>
+
+      <button type="submit" class="button-submit">Cadastrar</button>
+    </form>
+    <a href="../login/login.html">Já possui conta? Faça login!</a>
+  </div>
+
+  <div class="toast" id="toast">Cadastro realizado com sucesso!</div>
+
+  <script src="cadastro.js"></script>
 </body>
 </html>

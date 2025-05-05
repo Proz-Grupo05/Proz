@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../../menu.css">
     <link rel="stylesheet" href="../../../rodape.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="carrinho.css">
     <script src="../../../carrinho.js" defer></script>
-    <script src="home.js" defer></script>
+    <script src="carrinho-page.js" defer></script>
     <script src="../../../rodape.js" defer></script>
-    <title>Supermercado Compre Bem</title>
+    <title>Carrinho - Supermercado Compre Bem</title>
   </head>
   <body>
     <header>
@@ -45,19 +45,13 @@
       </nav>
     </header>
     <main>
-      <section class="slideshow">
-        <a href="../categorias/categorias.html">
-          <img class="img-slideshow" style="width: 960px" src="../../../assets/banner-pascoa.png" alt="Banner 1" class="slide" />
-        </a>
-      </section>
-      <section class="products-on-sale">
-      </section>
-      <section class="product-categories">
-        <div class="product-category-container">
-        </div>
-      </section>
-      <section class="product-brands">
-        <div class="product-brand">
+      <section class="cart-container">
+        <h1>Seu Carrinho</h1>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-summary">
+          <h2>Resumo do Pedido</h2>
+          <p>Total: <span id="cart-total">R$0,00</span></p>
+          <button class="checkout-button">Continuar Compra</button>
         </div>
       </section>
     </main>
@@ -76,15 +70,9 @@
           <div class="social-links">
             <h2>REDES SOCIAIS</h2>
             <div class="container-social-links">
-              <a href="https://www.instagram.com/" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="https://www.facebook.com/" aria-label="Facebook">
-                <i class="fab fa-facebook"></i>
-              </a>
-              <a href="https://www.youtube.com/" aria-label="YouTube">
-                <i class="fab fa-youtube"></i>
-              </a>
+              <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.youtube.com/" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
         </div>
@@ -124,9 +112,7 @@
           </div>
           <div class="customer-services">
             <h2>ATENDIMENTO</h2>
-            <p>
-              <span><i class="fa-brands fa-whatsapp"></i></span> (48) 99999-9999
-            </p>
+            <p><span><i class="fa-brands fa-whatsapp"></i></span> (48) 99999-9999</p>
             <p>Horário de atendimento:</p>
             <p>De segunda a sábado das 08h às 22h</p>
           </div>

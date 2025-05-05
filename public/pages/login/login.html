@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <h1>Login</h1>
-        <a href="../home/home.html">
-            <img src="https://cdn-icons-png.flaticon.com/128/3236/3236910.png" alt="Voltar">
-        </a>
-    </header>
+  <header class="cabecalho">
+    <h1>Login</h1>
+    <a href="../home/home.html">
+      <img src="https://cdn-icons-png.flaticon.com/128/3236/3236910.png" alt="Voltar">
+    </a>
+  </header>
 
-    <div class="card">
-        <h3>Login</h3>
-        <form action="#" method="POST" class="form">
-            <input type="email" name="email" placeholder="E-mail" required class="input">
-            <input type="password" name="senha" placeholder="Senha" required class="input">
-            <button type="submit" class="button-submit">Entrar</button>
-        </form>
-        <a href="../cadastro/cadastro.html">Não possui conta? Cadastre-se!</a>
-        <button type="button" onclick="buscaSenha()" class="button-pass">Esqueceu a senha?</button>
-    </div>
+  <div class="card">
+    <h3>Login</h3>
+    <form id="loginForm" class="form">
+      <input type="email" id="email" name="email" placeholder="E-mail" required class="input">
+      <span id="erro-email" class="erro-msg"></span>
+
+      <input type="password" id="senha" name="senha" placeholder="Senha" required class="input">
+      <span id="erro-senha" class="erro-msg"></span>
+
+      <button type="submit" class="button-submit">Entrar</button>
+    </form>
+
+    <a href="../cadastro/cadastro.html">Não possui conta? Cadastre-se!</a>
+    <button type="button" id="esqueci-senha" class="button-pass">Esqueceu a senha?</button>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="login.js"></script>
 </body>
 </html>
